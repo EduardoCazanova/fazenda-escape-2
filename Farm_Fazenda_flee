@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Fazenda Escape</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #2e7d32;
+      color: white;
+      text-align: center;
+    }
+    #menu, #game {
+      display: none;
+      padding: 20px;
+    }
+    button {
+      padding: 15px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      margin: 10px;
+    }
+    .start { background: #ffeb3b; color: #000; }
+  </style>
+</head>
+<body>
+
+<div id="menu">
+  <h1>🌾 Fazenda Escape</h1>
+  <p>Complete os computadores e fuja do assassino!</p>
+  <button class="start" onclick="startGame()">JOGAR</button>
+</div>
+
+<div id="game">
+  <h2>🏃 Jogo Iniciado</h2>
+  <p>Computadores restantes: <span id="pcs">2</span></p>
+  <button onclick="hack()">💻 Hackear PC</button>
+</div>
+
+<script>
+  let pcs = 2;
+  document.getElementById("menu").style.display = "block";
+
+  function startGame() {
+    document.getElementById("menu").style.display = "none";
+    document.getElementById("game").style.display = "block";
+  }
+
+  function hack() {
+    if (pcs > 0) {
+      pcs--;
+      document.getElementById("pcs").innerText = pcs;
+      if (pcs === 0) {
+        alert("🚪 Portas desbloqueadas! FUJA!");
+      }
+    }
+  }
+</script>
+
+</body>
+</html>
