@@ -1,0 +1,17 @@
+index.html<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Fazenda Escape</title>
+</head>
+<body style="background:#2e7d32;color:white;text-align:center;font-family:Arial">
+
+<h1>🌾 Fazenda Escape</h1>
+<p>O jogo está funcionando!</p>
+
+<button onclick="alert('Botão funcionando!')">
+JOGAR
+</button>
+
+</body>
+</html>
